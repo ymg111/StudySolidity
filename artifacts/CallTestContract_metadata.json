@@ -1,0 +1,125 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_test",
+						"type": "address"
+					}
+				],
+				"name": "getXtwo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract TestContract",
+						"name": "_test",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					}
+				],
+				"name": "setXandReceiveEtherOne",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_test",
+						"type": "address"
+					}
+				],
+				"name": "setXandValueone",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract TestContract",
+						"name": "_test",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					}
+				],
+				"name": "setXtwo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"调用其他合约.sol": "CallTestContract"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"调用其他合约.sol": {
+			"keccak256": "0x987e82e23e90d7336c87cdb12443c5ad9b36fdebc76ebc65d3992ec471d99479",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://41469160f35cdb89ebe62bad290e71cd22f2c4325c7132f950a767113e63a4d7",
+				"dweb:/ipfs/QmNpLdF2kXPxjqbeChf3QhMyWvE34kiNCSFAScT5Ep5fNq"
+			]
+		}
+	},
+	"version": 1
+}

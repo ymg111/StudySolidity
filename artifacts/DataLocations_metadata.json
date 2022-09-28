@@ -1,0 +1,118 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "MyStructs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "foo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "text",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "y",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string",
+						"name": "s",
+						"type": "string"
+					}
+				],
+				"name": "examples",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "y",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string",
+						"name": "s",
+						"type": "string"
+					}
+				],
+				"name": "examplesTwo",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity 存储位置.sol": "DataLocations"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity 存储位置.sol": {
+			"keccak256": "0xfedf6a98d83bcf8c28f929679bf79b81720e0c0cce47348a7aba27be6890b10e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://055a75cdf07fb1f2fd9b1b0b58cf40990996ed294337a08771b9e7eabdb84193",
+				"dweb:/ipfs/QmVBcNHjQi6w443pfi1d795NkS9poLwmo2DegjXHRU8hwa"
+			]
+		}
+	},
+	"version": 1
+}

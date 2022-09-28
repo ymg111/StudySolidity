@@ -1,0 +1,71 @@
+pancake pool代码分析以及部署
+https://bscscan.com/address/0xdf4dbf6536201370f95e06a0f8a7a70fe40e388a#code
+1 部署pancake PANCAKEPROFILE合约，查询初始化值
+-----Decoded View--------------- 
+Arg [0] : _cakeToken (address): 0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82
+ Arg [1] : _numberCakeToReactivate (uint256): 2000000000000000000 
+Arg [2] : _numberCakeToRegister (uint256): 1000000000000000000 
+Arg [3] : _numberCakeToUpdate (uint256): 2000000000000000000 
+
+
+执行addTeam 方法 参数  大于3小于16
+
+2 部署pancakepool.sol 执行初始化方法
+
+
+PANCAKEPROFILE地址（0x5a4590C4Fa81B0672a684ae015E1757dBDf94377）
+
+false 
+
+0
+
+
+
+0x41722749d61eeEA8bCcF04206fc35BF7C920c321 usdt
+
+0xFa60D973F7642B748046464e165A65B7323b0DEE cake
+
+0x7A2465CEf0936b9a993515dF6AFaa3af30228DB2 MPT
+
+1000000000000000000
+
+22883420
+
+32883420
+
+10000000000000000000000000000000
+
+0
+
+0x3178604a4869038A6b1800feC135D3A4b69Eb4a1
+
+质押token address 收益token address  每个块的奖励 开始区块时间 结束区块时间 
+用户最开始的最大质押限制 eg：（100cake） 限制用户100cake交易的区块限制时间
+
+
+
+给pancake pool 打奖励token
+
+然后加lp池子 配合trigger 进行测试相关即可
+
+
+
+pancake池子特点： 每次质押 奖励会自动打给用户
+
+预览1.sol配置合约
+
+预览2.sol pool合约
+
+
+
+
+
+new test 0xC32C0381bbeeCaB752c2fc71219a5AE6b6Aea022
+
+
+
+
+
+五  阅举报
+
+

@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_func",
+						"type": "string"
+					}
+				],
+				"name": "getSelector",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity函数签名.sol": "Funtion"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity函数签名.sol": {
+			"keccak256": "0x38a544b08e80d9114068e5c29d64196b4cf3f4ec2eb8e7a546c426de46d8470b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2790a184320ab433fa7a6998ffbf45bcda4ffa7cd1b4ad3aad8a136e7aa4507e",
+				"dweb:/ipfs/QmWnMMKes1uk1V9PxANZL52q17BK5RwycaGDVJ4zXhL6TM"
+			]
+		}
+	},
+	"version": 1
+}

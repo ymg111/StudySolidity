@@ -1,0 +1,127 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.9;
+
+interface Ronter {
+    function register(address _refererAddress) external;
+    function buyNft() external;
+    function pledge(uint256 _tokenId)external ;
+    function buyTicket(uint256 _tokenId) external;
+    function dig(uint256 _tokenId) external;
+    function skipEpoch(uint256 _tokenId) external;
+    function recoverHP(uint256 _tokenId) external;
+    function unPledge(uint256 _tokenId) external;
+    function claimReward(uint256 _tokenId) external;
+    function mintPropNft() external returns(uint256 tokenId);
+    function bind(uint256 _tokenId, uint256 _tokenPropId) external;
+    function claimHpRewards() external;
+    function getUserInfo(address _user) external view returns(address, uint256, uint256);
+    function unbind(uint256 _tokenId, uint256 _tokenPropId) external;
+    function getTicketNumber(uint256 _tokenId) external returns(uint256);
+    function buyNfts() external;
+}
+interface IERC20 {
+    function transfer(address recipient, uint256 amount) external returns (bool);
+    function approve(address spender, uint256 amount) external returns (bool);
+    function transferFrom(address sender,address recipient,uint256 amount) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+}
+
+interface NFT{
+    function approve(address to, uint256 tokenId) external;
+    function transferFrom(address from,address to,uint256 tokenId) external;
+    function tokensOfOwner(address owner) external returns (uint256[] memory);
+}
+interface Logic{
+    function captainTokenURI(uint256 tokenId)external view returns (string memory);
+}
+contract TEST{
+    address public RouterAddress = 0x9cf1341451813aF117d4a04D113764a51403e4D5;
+    address public usdtAddress = 0x41722749d61eeEA8bCcF04206fc35BF7C920c321;
+    address public NFTAddress = 0x314DEb08aB1b11fDa2a3Be719ae3D4Ebb4BeD5F3;
+    address public mptAddress = 0xAdA480A44245695722C94c17ab514BF5fd0370bd;
+    address public logicAddress = 0xaF9c403F51490a8657B7f4B8F31EAdfc8622a2D9;
+
+    // function setRouterAddress(address _RouterAddress)public  {
+    //     RouterAddress = _RouterAddress;
+    // }
+
+    // function setusdtAddress(address _usdtAddress,address _mptAddress)public  {
+    //     usdtAddress = _usdtAddress;
+    //     mptAddress = _mptAddress;
+    // }
+
+    // function setNFTAddress(address _NFTAddress)public  {
+    //     NFTAddress = _NFTAddress;
+    // }
+
+    // 购买nft
+    function testbuy() public {
+        Ronter(RouterAddress).register(0x9F1F0ea769EE750E2Fcd2de60D5f17a6b6e2AdcA);
+        (address x,,) = Ronter(RouterAddress).getUserInfo(address(this));
+        require(x == 0x9F1F0ea769EE750E2Fcd2de60D5f17a6b6e2AdcA,"register error");
+        IERC20(usdtAddress).approve(RouterAddress,100000e18);
+        Ronter(RouterAddress).buyNft();
+        // 添加查询用户是否质押方法，再加断言
+
+
+    }
+    // 质押nft
+    function stakeNFT(uint _NFTid) public {
+        NFT(NFTAddress).approve(RouterAddress,_NFTid);
+        // 质押NFT
+        Ronter(RouterAddress).pledge(_NFTid);
+
+        IERC20(mptAddress).approve(RouterAddress,100000000e18);
+        // 购买通行政
+        Ronter(RouterAddress).buyTicket(_NFTid);
+        require(Ronter(RouterAddress).getTicketNumber(_NFTid) == 30,"getTicketNumber error");
+        // 开始挖矿
+        Ronter(RouterAddress).dig(_NFTid);
+        require(Ronter(RouterAddress).getTicketNumber(_NFTid) < 30,"getTicketNumber error");
+        // 加速一段
+        Ronter(RouterAddress).skipEpoch(_NFTid);
+        // // 回复hp
+        // Ronter(RouterAddress).recoverHP(_NFTid);
+        // 退回剩余的mpt 和 usdt代币
+        // uint mptbalance = IERC20(mptAddress).balanceOf(address(this));
+        // IERC20(mptAddress).transfer(msg.sender,mptbalance);
+        // uint usdtbalance = IERC20(usdtAddress).balanceOf(address(this));
+        // IERC20(mptAddress).transfer(msg.sender,usdtbalance);
+        // 解除质押
+        // Ronter(RouterAddress).unPledge(_NFTid);
+        // // 领取奖励
+        // Ronter(RouterAddress).claimReward(_NFTid);
+    }
+    // 挂载道具
+    function setbind (uint _NFTid) public {
+        uint propNFTid = Ronter(RouterAddress).mintPropNft();
+        Ronter(RouterAddress).bind(_NFTid, propNFTid);
+        // 加速一段
+        Ronter(RouterAddress).skipEpoch(_NFTid);
+        // 领取奖励
+        Ronter(RouterAddress).claimReward(_NFTid);    
+        // 回复hp
+        Ronter(RouterAddress).recoverHP(_NFTid);
+        // 卸载道具
+        Ronter(RouterAddress).unbind(_NFTid, propNFTid);
+
+        // 可注释掉卸载道具方法，测试挂载着道具的探险家NFT合约
+        // 转账探险家NFT
+        NFT(NFTAddress).transferFrom(address(this),0x70bbEa39652CA42C63F70531f8526B35575615A0,_NFTid);
+    }
+
+    function setHPclaimReward() public {
+        Ronter(RouterAddress).claimHpRewards();
+    }
+
+    function setbuynfts() public {
+        Ronter(RouterAddress).buyNfts();
+    }
+
+    function geturl(uint256 tokenId)public view returns (string memory){
+        return (Logic(logicAddress).captainTokenURI(tokenId));
+    }
+
+
+
+}

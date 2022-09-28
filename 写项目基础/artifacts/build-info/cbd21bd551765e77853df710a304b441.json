@@ -1,0 +1,330 @@
+{
+	"id": "cbd21bd551765e77853df710a304b441",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.15",
+	"solcLongVersion": "0.8.15+commit.e14f2714",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"学习基础/写个蓝图计划.sol": {
+				"content": " // SPDX-License-Identifier: MIT  \r\n\r\npragma solidity ^0.8.7;  \r\n\r\ncontract BluePlan {\r\n\r\n\r\n\r\n\r\n    \r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": true,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"学习基础/写个蓝图计划.sol": {
+				"BluePlan": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"\\xe5\\xad\\xa6\\xe4\\xb9\\xa0\\xe5\\x9f\\xba\\xe7\\xa1\\x80/\\xe5\\x86\\x99\\xe4\\xb8\\xaa\\xe8\\x93\\x9d\\xe5\\x9b\\xbe\\xe8\\xae\\xa1\\xe5\\x88\\x92.sol\":67:103  contract BluePlan {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"\\xe5\\xad\\xa6\\xe4\\xb9\\xa0\\xe5\\x9f\\xba\\xe7\\xa1\\x80/\\xe5\\x86\\x99\\xe4\\xb8\\xaa\\xe8\\x93\\x9d\\xe5\\x9b\\xbe\\xe8\\xae\\xa1\\xe5\\x88\\x92.sol\":67:103  contract BluePlan {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220925ccf4eb840a2f8c0c2c2ad93856118623b029f3d388b4d43ee64a4024d3e1164736f6c634300080f0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220925ccf4eb840a2f8c0c2c2ad93856118623b029f3d388b4d43ee64a4024d3e1164736f6c634300080f0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SWAP3 0x5C 0xCF 0x4E 0xB8 BLOCKHASH LOG2 0xF8 0xC0 0xC2 0xC2 0xAD SWAP4 DUP6 PUSH2 0x1862 EXTCODESIZE MUL SWAP16 RETURNDATASIZE CODESIZE DUP12 0x4D NUMBER 0xEE PUSH5 0xA4024D3E11 PUSH5 0x736F6C6343 STOP ADDMOD 0xF STOP CALLER ",
+							"sourceMap": "67:36:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220925ccf4eb840a2f8c0c2c2ad93856118623b029f3d388b4d43ee64a4024d3e1164736f6c634300080f0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SWAP3 0x5C 0xCF 0x4E 0xB8 BLOCKHASH LOG2 0xF8 0xC0 0xC2 0xC2 0xAD SWAP4 DUP6 PUSH2 0x1862 EXTCODESIZE MUL SWAP16 RETURNDATASIZE CODESIZE DUP12 0x4D NUMBER 0xEE PUSH5 0xA4024D3E11 PUSH5 0x736F6C6343 STOP ADDMOD 0xF STOP CALLER ",
+							"sourceMap": "67:36:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 67,
+									"end": 103,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220925ccf4eb840a2f8c0c2c2ad93856118623b029f3d388b4d43ee64a4024d3e1164736f6c634300080f0033",
+									".code": [
+										{
+											"begin": 67,
+											"end": 103,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 67,
+											"end": 103,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 67,
+											"end": 103,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 67,
+											"end": 103,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 67,
+											"end": 103,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 67,
+											"end": 103,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"学习基础/写个蓝图计划.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"\\u5b66\\u4e60\\u57fa\\u7840/\\u5199\\u4e2a\\u84dd\\u56fe\\u8ba1\\u5212.sol\":\"BluePlan\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"\\u5b66\\u4e60\\u57fa\\u7840/\\u5199\\u4e2a\\u84dd\\u56fe\\u8ba1\\u5212.sol\":{\"keccak256\":\"0x84a7d4ff7f22a3da5f0d75ae72e87522e646fe3d68fdd2a22bde933e8b8c8d9b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f84e5db993eeeaa6e5f6f432add8199e467886fcb247f5617813bb3afc59c5ce\",\"dweb:/ipfs/QmbZ15eYt6pvjxt1X2po556WkT6VHGaAEJ4nc4iyUdD6DZ\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"学习基础/写个蓝图计划.sol": {
+				"ast": {
+					"absolutePath": "学习基础/写个蓝图计划.sol",
+					"exportedSymbols": {
+						"BluePlan": [
+							2
+						]
+					},
+					"id": 3,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "38:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "BluePlan",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 2,
+							"linearizedBaseContracts": [
+								2
+							],
+							"name": "BluePlan",
+							"nameLocation": "76:8:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [],
+							"scope": 3,
+							"src": "67:36:0",
+							"usedErrors": []
+						}
+					],
+					"src": "38:65:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
